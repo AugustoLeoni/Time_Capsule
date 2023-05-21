@@ -7,10 +7,10 @@ interface User {
   avatarUrl: string
 }
 
-export function getUser():User {
+export function getUser(): User {
   const token = cookies().get('token')?.value
 
-  if(!token) {
+  if (!token) {
     throw new Error('Unauthenticated.')
   }
 
